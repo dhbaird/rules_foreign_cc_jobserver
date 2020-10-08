@@ -2,7 +2,10 @@
 Description=Make Jobserver
 
 [Service]
-ExecStart=/usr/local/bin/start_jobserver 32
+# The default will use 'nproc' to determine the number of job slots:
+ExecStart=/usr/local/bin/start_jobserver
+# Or, you can choose a specific number of job slots:
+#ExecStart=/usr/local/bin/start_jobserver 8
 
 [Install]
 WantedBy=default.target
