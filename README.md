@@ -40,7 +40,7 @@ Additional reading:
 - https://www.gnu.org/software/make/manual/html_node/Job-Slots.html
 - https://www.gnu.org/software/make/manual/html_node/POSIX-Jobserver.html
 
-# Instrucions
+# Instructions
 
 Step 1: Get the jobserver running:
 
