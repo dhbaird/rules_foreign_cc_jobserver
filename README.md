@@ -1,8 +1,13 @@
 # rules_foreign_cc_jobserver
 
-Rules_foreign_cc_jobserver provides a Make-based jobserver to help run
-[Make](https://www.gnu.org/software/make/) inside of Bazel. Read this for the
-background information:
+[Rules_foreign_cc_jobserver](https://github.com/dhbaird/rules_foreign_cc_jobserver)
+provides a Make-based jobserver to help run
+[Make](https://www.gnu.org/software/make/)
+inside of
+[Bazel](https://bazel.build/)
+in conjunction with
+[rules_foreign_cc](https://github.com/bazelbuild/rules_foreign_cc).
+Read this for the background information:
 
 https://github.com/bazelbuild/rules_foreign_cc/issues/329  Parallel build support
 
