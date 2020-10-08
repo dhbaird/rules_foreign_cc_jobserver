@@ -66,9 +66,9 @@ http_archive(
    url = "https://github.com/dhbaird/rules_foreign_cc_jobserver/archive/main.zip",
 )
 
-# Tell rules_foreign_cc to use jmake:
+# Tell rules_foreign_cc to use sjsmake:
 rules_foreign_cc_dependencies([
-    "@rules_foreign_cc_jobserver//:built_jmake"
+    "@rules_foreign_cc_jobserver//:built_sjsmake"
 ])
 ```
 
