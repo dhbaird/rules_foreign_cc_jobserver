@@ -49,7 +49,8 @@ systemctl --user status jobserver.service
 ```
 
 Note: you may want to edit `~/.config/systemd/user/jobserver.service` to adjust
-the number of job slots. By default, `start_jobserver` will run `nproc` to
+the number of job slots. By default, `start_jobserver` will use `nproc` to
+determine the number of threads available on your machine.
 
 Step 2: Add this to your WORKSPACE (along with the other lines described at https://github.com/bazelbuild/rules_foreign_cc/:
 
