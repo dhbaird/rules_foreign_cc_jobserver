@@ -1,7 +1,8 @@
 # rules_foreign_cc_jobserver
 
-Rules_foreign_cc_jobserver provides a make-based jobserver to help run make
-inside of Bazel. Read this for the background information:
+Rules_foreign_cc_jobserver provides a Make-based jobserver to help run
+[Make](https://www.gnu.org/software/make/) inside of Bazel. Read this for the
+background information:
 
 https://github.com/bazelbuild/rules_foreign_cc/issues/329  Parallel build support
 
@@ -29,6 +30,10 @@ settle for a 2\*N-1 compromise. This compromise is unavoidable since we have
 two separate schedulers that don't know about each other. But is a very usable
 compromise until Bazel can be enhanced to make one unified job scheduler
 possible.
+
+Additional reading:
+- https://www.gnu.org/software/make/manual/html_node/Job-Slots.html
+- https://www.gnu.org/software/make/manual/html_node/POSIX-Jobserver.html
 
 # Instrucions
 
