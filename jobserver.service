@@ -1,0 +1,8 @@
+[Unit]
+Description=Make Jobserver
+
+[Service]
+ExecStart=/usr/local/bin/start_jobserver 32
+
+[Install]
+WantedBy=default.target

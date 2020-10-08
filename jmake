@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+exec 3<$JOBSERVER/rd
+exec 4>$JOBSERVER/wr
+MAKEFLAGS=" -j --jobserver-fds=3,4" make "$@"

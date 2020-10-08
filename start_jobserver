@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Usage:   start_jobserver NPROC
+#
+# Options:
+#     NPROC   The number of job slots to create. (I.e. the amount of
+#             parallelism to permit.)
+
+set -euo pipefail
+JOBSERVER=${JOBSERVER:-$HOME/.jobserver}
+NPROC=$1
+mkdir -p $JOBSERVER
+rm -f $JOBSERVER/rd $JOBSERVER/wr
+mkfifo $JOBSERVER/rd $JOBSERVER/wr
+echo "jobserver: ; +cat >$JOBSERVER/rd <&3 & ( while true; do cat <$JOBSERVER/wr; sleep 0.1; done ) >&4 & wait" | make -f - -j $NPROC
