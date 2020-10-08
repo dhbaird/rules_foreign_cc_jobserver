@@ -15,6 +15,11 @@ At some point, we may hope Bazel may provide a jobserver of its own, or other
 means of enabling parallel Make builds, and then you won't need
 rules_foreign_cc_jobserver anymore. But in the mean time, this may help!
 
+# News
+
+20201008 - Renamed jmake to sjsmake (breaking change, apologies) to avoid
+conflict with another project that already uses the jmake name.
+
 # Instructions
 
 Step 1: Get the jobserver running:
