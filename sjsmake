@@ -1,5 +1,12 @@
 #!/bin/bash
+
+# sjsmake - shared-jobserver make
+# Description:
+# The same thing as "make" except that it uses a shared jobserver for better
+# resource utilization in case of multiple builds occurring simultaneously.
+
 set -euo pipefail
+MAKE=${MAKE:-make}
 exec 3<$JOBSERVER/rd
 exec 4>$JOBSERVER/wr
-MAKEFLAGS=" -j --jobserver-fds=3,4" make "$@"
+MAKEFLAGS=" -j --jobserver-fds=3,4" ${MAKE} "$@"
