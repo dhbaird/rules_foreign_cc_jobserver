@@ -11,9 +11,9 @@ Read this for the background information:
 
 https://github.com/bazelbuild/rules_foreign_cc/issues/329  Parallel build support
 
-At some point, Bazel may provide a jobserver of its own, or other means of
-enabling this capability, and then you won't need rules_foreign_cc_jobserver
-anymore. But in the mean time, this may help!
+At some point, we may hope Bazel may provide a jobserver of its own, or other
+means of enabling parallel Make builds, and then you won't need
+rules_foreign_cc_jobserver anymore. But in the mean time, this may help!
 
 # How Does It Work?
 
