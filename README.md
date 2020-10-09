@@ -56,7 +56,7 @@ Step 3: When running Bazel, you have to provide options to help it locate and wr
 
 ```
 JOBSERVER=$HOME/.jobserver   # <-- Maybe add this to your login scripts?
-bazel-3.4.1 build @all//... --sandbox_writable_path=$JOBSERVER--action_env=JOBSERVER=$JOBSERVER
+bazel build @all//... --sandbox_writable_path=$JOBSERVER --action_env=JOBSERVER=$JOBSERVER
 ```
 
 # How Does It Work?
